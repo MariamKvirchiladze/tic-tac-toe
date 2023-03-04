@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tic Tac Toe</title>
+  </head>
+  <body>
+    <!-- New game menu start -->
+    <section id="start-page">
+      <img id="logo" src="./assets/logo.svg" alt="logo" />
+      <div id="players">
+        <h1>Pick player 1's mark</h1>
+        <div id="choose-player">
+          <div onclick="pickPlayerX()" id="choose-x">
+            <img
+              id="silver-x"
+              src="./assets/icon-x-silver.svg"
+              alt="icon-x-silver"
+            />
+            <img id="dark-x" src="./assets/icon-x-dark.svg" alt="icon-x-dark" />
+          </div>
+          <div onclick="pickPlayerO()" class="active" id="choose-o">
+            <img
+              id="silver-o"
+              src="./assets/icon-o-silver.svg"
+              alt="icon-o-silver"
+            />
+            <img id="dark-o" src="./assets/icon-o-dark.svg" alt="icon-o-dark" />
+          </div>
+        </div>
+        <p>Remember: X goes first</p>
+      </div>
+      <div id="start-buttons">
+        <button class="start-pg-btn" id="button-CPU">New Game (vs CPU)</button>
+        <button class="start-pg-btn" id="button-PL">
+          New Game (vs player)
+        </button>
+      </div>
+    </section>
+    <section id="game-page">
+      <!-- New game menu start -->
+      <div id="game-menu">
+        <img src="./assets/logo.svg" alt="logo" />
+        <div id="turnOFplayer">
+          <img src="./assets/icon-x-silver.svg" id="turn-x" alt="silver-icon" />
+          <img src="./assets/icon-o-silver.svg" id="turn-o" alt="silver-icon" />
+          <h1 id="turn-h1">TURN</h1>
+        </div>
+        <div id="restart">
+          <button id="restart-btn">
+            <img
+              id="restart-icon"
+              src="./assets/icon-restart.svg"
+              alt="restart-icon"
+            />
+          </button>
+        </div>
+      </div>
+      <!-- New game menu end -->
+
+      <!-- Game board start -->
+      <div id="game-board">
+        <div class="cell" id="0"></div>
+        <div class="cell" id="1"></div>
+        <div class="cell" id="2"></div>
+        <div class="cell" id="3"></div>
+        <div class="cell" id="4"></div>
+        <div class="cell" id="5"></div>
+        <div class="cell" id="6"></div>
+        <div class="cell" id="7"></div>
+        <div class="cell" id="8"></div>
+      </div>
+      <div id="scores">
+        <div class="score-cell" id="scores-x">
+          <p id="PL1-label">X (You)</p>
+          <h2 id="PL1-scores">0</h2>
+        </div>
+        <div class="score-cell" id="ties">
+          <p>Ties</p>
+          <h2 id="ties-score">0</h2>
+        </div>
+        <div class="score-cell" id="scores-o">
+          <p id="PL2-label">0 (CPU)</p>
+          <h2 id="PL2-scores">0</h2>
+        </div>
+      </div>
+    </section>
+    <!-- Game board end -->
+    <!-- Game allerts start -->
+    <section id="winner">
+      <div id="winner-allert">
+        <p id="winnerIs">YOU WON!</p>
+
+        <h1 id="round"><img id="icon" src="" />TAKES THE ROUND</h1>
+      </div>
+      <div id="allert-buttons">
+        <button id="quit-btn">QUIT</button>
+        <button id="next-btn">NEXT ROUND</button>
+      </div>
+    </section>
+    <section id="reset-menu">
+      <h2 id="reset">RESTART GAME?</h2>
+      <div id="reset-buttons">
+        <button id="no-btn">NO, CANCEL</button>
+        <button id="yes-btn">YES, RESTART</button>
+      </div>
+    </section>
+    <!-- Game allerts end -->
+    <script src="./js.js"></script>
+  </body>
+</html>
