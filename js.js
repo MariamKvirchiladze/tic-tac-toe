@@ -47,17 +47,7 @@ let xturn = true;
 let checkedboxes = ["", "", "", "", "", "", "", "", ""];
 //display x/o on click
 function playgame() {
-  if (vsCPU && !pickedX) {
-    let emptyCells = [];
-    for (let j = 0; j < checkedboxes.length; j++) {
-      if (checkedboxes[j] === "") {
-        emptyCells.push(j);
-      }
-    }
-    let randomIndex = Math.floor(Math.random() * emptyCells.length);
-    let computerMove = emptyCells[randomIndex];
-    document.getElementById(computerMove).click();
-  }
+  
   cell.forEach((element) => {
     element.addEventListener(`click`, function play() {
       let i = element.id;
@@ -109,6 +99,17 @@ function playgame() {
       }
     });
   });
+  if (vsCPU && !pickedX) {
+    let emptyCells = [];
+    for (let j = 0; j < checkedboxes.length; j++) {
+      if (checkedboxes[j] === "") {
+        emptyCells.push(j);
+      }
+    }
+    let randomIndex = Math.floor(Math.random() * emptyCells.length);
+    let computerMove = emptyCells[randomIndex];
+    document.getElementById(computerMove).click();
+  }
 }
 
 function winChecker() {
